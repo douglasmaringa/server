@@ -13,7 +13,7 @@ const timeSheetRoute = require("./routes/timesheet");
 const timeSheetRoute2 = require("./routes/timesheet2");
 
 // DB connection
-mongoose.connect('mongodb+srv://jonnysins2024:0774450965@cluster0.v50bq57.mongodb.net/?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb+srv://jonnysins2024:0774450965@cluster0.xrmgxpr.mongodb.net/?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
     console.log("Db is connected successfully");
   })
