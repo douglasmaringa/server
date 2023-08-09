@@ -21,22 +21,22 @@ const timeSheetsSchema = new mongoose.Schema({
   },
   period: {
     startDate: {
-      type: Date,
+      type: Boolean,
       required: true,
     },
     endDate: {
-      type: Date,
+      type: Boolean,
       required: true,
     },
   },
   hoursWorked: [
     {
       date: {
-        type: Date,
+        type: Boolean,
         required: true,
       },
       hours: {
-        type: String,
+        type: Boolean,
         required: true,
       },
     },
