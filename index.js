@@ -30,10 +30,6 @@ app.use(cors());
 // Serve static files from the "uploads" directory
 app.use('/uploads', express.static('uploads'));
 
-// Serve the frontend build from the 'Phase1/client/dist' directory
-const clientBuildPath = path.join(__dirname, '..', 'client', 'dist');
-app.use(express.static(clientBuildPath));
-
 
 // Custom middleware for Content Security Policy
 app.use(helmet({
@@ -51,10 +47,7 @@ app.use("/api/employee", employeeRoute);
 app.use("/api/timesheet", timeSheetRoute);
 app.use("/api/timesheet2", timeSheetRoute2);
 
-// Catch-all route to serve the React app
-app.get('*', (req, res) => {
-  res.sendFile(path.join(clientBuildPath, 'index.html'));
-});
+
 
 app.listen(8080, () => {
   console.log("Server running on port 8080");
